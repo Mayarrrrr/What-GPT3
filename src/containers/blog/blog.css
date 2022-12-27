@@ -1,0 +1,78 @@
+.gpt3__blog {
+    display: flex;
+    flex-direction: column;    
+}
+
+.gpt3__blog-heading {
+    width: 100%;
+    text-align: left;
+
+    margin-bottom: 5rem;
+}
+
+.gpt3__blog-heading h1 {
+    font-size: 62px;
+    line-height: 75px;
+    font-family: var(--font-family);
+    font-weight: 800;
+}
+
+.gpt3__blog-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.gpt3__blog-container_groupA {
+    flex: 0.75;
+    margin-right: 2rem;
+}
+
+.gpt3__blog-container_groupB {
+    flex: 1;
+
+    display:grid;       /* The element behaves like a block element and lays out its content according to the grid model al hwa al line al b3do */
+    grid-template-columns: repeat(2, 1fr);      /*di hya hya repeat(1fr 1fr) y3ni ya5od 2 cols */  
+    grid-gap: 2rem;     /*al far2 ben al item w al tany fe al grid*/
+}
+
+@media screen and (max-width: 990px) {
+    .gpt3__blog-container {
+        flex-direction: column;     /*lw 3ayza gpB yban al awl fe al sc al so8yra hst5dm => column-reverse */
+    }
+
+
+    .gpt3__blog-container_groupA {
+        margin: 2rem 0;
+    }
+    /*3shan a5ly al article al fe col lw7do lma yb2a fe small devices yban block zi al ba2yen*/
+    .gpt3__blog-container_groupA .gpt3__blog-container_article  {
+       width: 48%;
+    }
+
+    .gpt3__blog-container_groupA .gpt3__blog-container_article-image {
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .gpt3__blog-container_groupB {
+        grid-template-columns: repeat(1, 1fr);     /*fe al screens al as8r h5leha 1 per row*/
+    }
+
+    .gpt3__blog-container_groupA .gpt3__blog-container_article  {
+       width: 100%;
+    }
+
+    .gpt3__blog-heading h1 {
+        font-size: 46px;
+        line-height: 52px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .gpt3__blog-heading h1 {
+        font-size: 34px;
+        line-height: 42px;
+    }
+
+}

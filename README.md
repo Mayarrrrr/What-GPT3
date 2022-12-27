@@ -1,6 +1,6 @@
 # Repo : What GPT3?
 
-It's a GPT3 landing page responsive to the all sizes of devices
+It's a GPT3 landing page built with the framework react-js,  responsive to all sizes of devices
 
 ## Deployment
 
